@@ -7,6 +7,7 @@
     "test": "echo \"No test will be run on this project\"",
     "lint": "stylelint \"./**/*.scss\"",
     "lint:fix": "stylelint --fix \"./**/*.scss\"",
+    "build": "node src/scripts/build.js",
     "prepare": "husky"
   },
   "husky": {
@@ -28,6 +29,7 @@
     "lint-staged": "^15.2.10",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
+    "sass": "^1.79.4",
     "stylelint": "^16.9.0",
     "stylelint-config-sass-guidelines": "^12.1.0",
     "stylelint-prettier": "^5.0.2"

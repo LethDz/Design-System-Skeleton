@@ -6,8 +6,12 @@
 	https://www.npmjs.com/package/normalize-scss
 */
 
-@import 'normalize/import-now';
+@import 'normalize-scss/sass/normalize/import-now';
 /* 
-	You can import directly node_modules like this
-	@import "node_modules/normalize-scss/sass/normalize/import-now;
-*/
+ *	You can import directly like this
+ *	@import "node_modules/normalize-scss/sass/normalize/import-now";
+ *	to support sass to find the file and add the path to the normalize-scss folder. 
+ *	For example:
+ *	const nodeModulesPath = path.resolve('node_modules');
+ *	to this: const nodeModulesPath = path.resolve('.');
+ */
