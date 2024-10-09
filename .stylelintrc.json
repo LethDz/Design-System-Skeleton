@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    "stylelint-prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      true,
+      {
+        "trailingComma": "es5",
+        "tabWidth": 2,
+        "semi": true,
+        "singleQuote": true,
+        "bracketSameLine": false,
+        "bracketSpacing": false,
+        "endOfLine": "lf",
+        "printWidth": 120,
+        "arrowParens": "avoid"
+      }
+    ]
+  },
+  "extends": [
+    "stylelint-config-sass-guidelines",
+    "stylelint-prettier/recommended"
+  ]
+}

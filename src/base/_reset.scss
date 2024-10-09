@@ -1,0 +1,13 @@
+/* -------------------------------------------------------------------------- */
+/*                                 CSS Resets                                 */
+/* -------------------------------------------------------------------------- */
+/* 
+	The normalize.css npm package improves browser rendering consistency.
+	https://www.npmjs.com/package/normalize-scss
+*/
+
+@import 'normalize/import-now';
+/* 
+	You can import directly node_modules like this
+	@import "node_modules/normalize-scss/sass/normalize/import-now;
+*/
