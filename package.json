@@ -1,5 +1,5 @@
 {
-  "name": "@ds/scss",
+  "name": "@ds/common-styles",
   "version": "1.0.0",
   "description": "This is a skeleton for organizing designed component system",
   "main": "index.js",
@@ -10,6 +10,10 @@
     "build": "node src/scripts/build.js",
     "prepare": "husky"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -33,5 +37,14 @@
     "stylelint": "^16.9.0",
     "stylelint-config-sass-guidelines": "^12.1.0",
     "stylelint-prettier": "^5.0.2"
+  },
+  "private": true,
+  "homepage": "https://github.com/LethDz/Design-System-Skeleton#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LethDz/Design-System-Skeleton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LethDz/Design-System-Skeleton/issues"
   }
 }
