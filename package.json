@@ -25,7 +25,6 @@
   "author": "@lethdz",
   "license": "MIT",
   "dependencies": {
-    "@ds/scss": "file:",
     "normalize-scss": "^8.0.0"
   },
   "devDependencies": {
