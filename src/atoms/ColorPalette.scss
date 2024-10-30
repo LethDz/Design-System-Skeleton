@@ -1,0 +1,11 @@
+@import 'foundation/all';
+
+@each $type, $value in $color {
+  .dse-color-#{$type} {
+    color: $value;
+  }
+
+  .dse-bg-color-#{$type} {
+    background-color: $value;
+  }
+}

@@ -114,3 +114,11 @@ $spacing: (
   xxxl: 6rem,
   // 96px
 ) !default;
+
+$fs: (
+  xs: $fs-xs,
+  sm: $fs-sm,
+  base: $fs-base,
+  lg: $fs-lg,
+  xl: $fs-xl,
+) !default;

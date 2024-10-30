@@ -1,7 +1,5 @@
 {
-  "plugins": [
-    "stylelint-prettier"
-  ],
+  "plugins": ["stylelint-prettier"],
   "rules": {
     "prettier/prettier": [
       true,
@@ -10,16 +8,15 @@
         "tabWidth": 2,
         "semi": true,
         "singleQuote": true,
+        "singleAttributePerLine": true,
         "bracketSameLine": false,
-        "bracketSpacing": false,
+        "bracketSpacing": true,
         "endOfLine": "lf",
         "printWidth": 100,
-        "arrowParens": "avoid"
+        "arrowParens": "always",
+        "jsxSingleQuote": true
       }
     ]
   },
-  "extends": [
-    "stylelint-config-sass-guidelines",
-    "stylelint-prettier/recommended"
-  ]
+  "extends": ["stylelint-config-sass-guidelines", "stylelint-prettier/recommended"]
 }
