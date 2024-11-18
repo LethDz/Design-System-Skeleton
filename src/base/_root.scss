@@ -37,3 +37,8 @@
   --dse-h5-font-weight: #{$fw-normal};
   --dse-h6-font-weight: #{$fw-light};
 }
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}

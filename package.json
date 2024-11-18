@@ -9,7 +9,8 @@
     "lint:fix": "stylelint --fix \"./**/*.scss\"",
     "build": "node src/scripts/build.js",
     "dev": "nodemon --watch src --exec \"pnpm run build\" -e scss",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commit": "git cz"
   },
   "files": [
     "dist",
@@ -17,7 +18,13 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
     }
   },
   "lint-staged": {
@@ -29,6 +36,10 @@
     "normalize-scss": "^8.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "nodemon": "^3.1.7",

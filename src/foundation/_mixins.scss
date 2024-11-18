@@ -10,38 +10,38 @@
 
 /* Mixin for phone */
 @mixin phone {
-  @media (min-width: map.get($breakpoints, 'sm')) {
+  @media (min-width: map-get($breakpoints, 'sm')) {
     @content;
   }
 }
 
 /* Mixin for tablet */
 @mixin tablet {
-  @media (min-width: map.get($breakpoints, 'md')) {
+  @media (min-width: map-get($breakpoints, 'md')) {
     @content;
   }
 }
 
 /* Mixin for laptop */
 @mixin laptop {
-  @media (min-width: map.get($breakpoints, 'lg')) {
+  @media (min-width: map-get($breakpoints, 'lg')) {
     @content;
   }
 }
 
 /* Mixin for desktop */
 @mixin desktop {
-  @media (min-width: map.get($breakpoints, 'xl')) {
+  @media (min-width: map-get($breakpoints, 'xl')) {
     @content;
   }
 }
 
 /* Mixin for padding */
 @mixin padding($space) {
-  padding: map.get($spacing, $space);
+  padding: map-get($spacing, $space);
 }
 
 /* Mixin for margin */
 @mixin margin($space) {
-  margin: map.get($spacing, $space);
+  margin: map-get($spacing, $space);
 }
