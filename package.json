@@ -10,7 +10,8 @@
     "build": "node src/scripts/build.js",
     "dev": "nodemon --watch src --exec \"pnpm run build\" -e scss",
     "prepare": "husky",
-    "commit": "git cz"
+    "commit": "git cz",
+    "migrate": "sass-migrator module --migrate-deps src/global.scss"
   },
   "files": [
     "dist",
@@ -46,6 +47,7 @@
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "sass": "^1.79.4",
+    "sass-migrator": "^2.2.1",
     "stylelint": "^16.9.0",
     "stylelint-config-sass-guidelines": "^12.1.0",
     "stylelint-prettier": "^5.0.2"

@@ -38,7 +38,7 @@ const createRequiredDir = async () => {
   await createDir(distPath);
   /* ---- Step 2: Create components directory in following `componentTypes` --- */
   const createDirPromise = componentTypes.map(type => {
-    const typePath = distPath.concat(`\\${type}`);
+    const typePath = distPath.concat(`/${type}`);
     return createDir(typePath);
   });
   try {
