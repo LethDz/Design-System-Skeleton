@@ -8,8 +8,8 @@ const sourcePath = path.resolve('src');
 const projectPath = path.resolve('.');
 const nodeModulesPath = path.resolve('node_modules');
 const globalFileName = 'global.scss';
-const distPath = projectPath.concat('\\dist');
-const globalDistPath = distPath.concat(`\\${globalFileName.replace('scss', 'css')}`);
+const distPath = projectPath.concat('/dist');
+const globalDistPath = distPath.concat(`/${globalFileName.replace('scss', 'css')}`);
 const componentTypes = ['atoms', 'molecules', 'organisms'];
 const dirPermission = 0o755;
 
@@ -86,7 +86,7 @@ const compileComponent = (path, fileName) => {
     });
 };
 /* Compile global.scss */
-const globalSourcePath = sourcePath.concat(`\\${globalFileName}`);
+const globalSourcePath = sourcePath.concat(`/${globalFileName}`);
 
 /* Scan and compile Components */
 /**
@@ -99,19 +99,19 @@ const scanAndCompileComponents = () => {
   const writePromise = [];
   // Scan
   componentTypes.forEach(type => {
-    const allFiles = fs.readdirSync(`src\\${type}`).map(file => ({
+    const allFiles = fs.readdirSync(`src/${type}`).map(file => ({
       fileName: file,
-      path: path.resolve(`src\\${type}\\${file}`),
+      path: path.resolve(`src/${type}/${file}`),
     }));
     allComponents.set(type, [...allFiles]);
   });
 
   // Compile
   allComponents.forEach((value, key) => {
-    const destDir = projectPath.concat(`\\dist\\${key}`);
+    const destDir = projectPath.concat(`/dist/${key}`);
     value.forEach(file => {
       const cssFile = file.fileName.replace('scss', 'css');
-      const targetFile = destDir.concat(`\\${cssFile}`);
+      const targetFile = destDir.concat(`/${cssFile}`);
       writePromise.push(compileComponent(file.path, targetFile));
     });
   });
